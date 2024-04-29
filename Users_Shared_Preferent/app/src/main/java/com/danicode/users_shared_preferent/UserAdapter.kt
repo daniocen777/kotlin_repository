@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.danicode.users_shared_preferent.databinding.ItemUserBinding
+import com.danicode.users_shared_preferent.databinding.ItemUserAltBinding
 
 // Adapter que recibe la lista de usuarios
 // UserAdapter.ViewHolder => Personalizado (clase interna que está al final)
@@ -20,17 +20,18 @@ class UserAdapter(private val users: List<User>, private val listener: IOnClickL
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Inicializar context
         context = parent.context
-        val view = LayoutInflater.from(context).inflate(R.layout.item_user, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_user_alt, parent, false)
         return ViewHolder(view)
     }
 
     // Rellenar con datos => como un foreach
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val user = users.get(position)
+        val personPosition: Int = position + 1
         with(holder) {
             // Funcion para hacer clic
-            setListener(user, position + 1)
-            binding.tvOrder.text = (position + 1).toString()
+            setListener(user, personPosition)
+            binding.tvOrder.text = personPosition.toString()
             binding.tvName.text = user.getFullName()
             // Foto
             Glide.with(context)
@@ -52,7 +53,7 @@ class UserAdapter(private val users: List<User>, private val listener: IOnClickL
         viewBinding true
         }
          * */
-        val binding = ItemUserBinding.bind(view) // vincular la vista a este adapter
+        val binding = ItemUserAltBinding.bind(view) // vincular la vista a este adapter
         fun setListener(user: User, position: Int) {
             binding.root.setOnClickListener { listener.onClick(user, position) }
         }
