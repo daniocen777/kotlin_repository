@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import com.danicode.basic.imc_calculator.ImcCalculatorActivity
+import com.danicode.basic.superhero.SuperHeroListActivity
 import com.danicode.basic.todo.ToDoActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -20,12 +21,17 @@ class MenuActivity : AppCompatActivity() {
         val btnSayHello = findViewById<Button>(R.id.btnSayHello)
         val btnIMCApp = findViewById<Button>(R.id.btnIMCApp)
         val btnTODO = findViewById<Button>(R.id.btnTODO)
+        val btnSuperHero = findViewById<Button>(R.id.btnSuperHero)
 
         btnSayHello.setOnClickListener { navigateToHello() }
         btnIMCApp.setOnClickListener { navigateIMCApp() }
         btnTODO.setOnClickListener { navigateTODOApp() }
+        btnSuperHero.setOnClickListener { navigateSuperHeroApp() }
+    }
 
-
+    private fun navigateSuperHeroApp() {
+        val intent = Intent(this, SuperHeroListActivity::class.java)
+        startActivity(intent)
     }
 
     private fun navigateTODOApp() {
