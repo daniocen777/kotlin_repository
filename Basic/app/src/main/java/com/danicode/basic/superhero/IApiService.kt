@@ -16,4 +16,12 @@ interface IApiService {
         @Query("r") r: String = "json",
         @Query("apikey") apikey: String = "83c53b2f"
     ): Response<SuperHeroDataResponse>
+
+    @GET("/")
+    suspend fun getSuperHeroDetail(
+        @Query("apikey") apikey: String = "83c53b2f",
+        @Query("type") type: String = "movie",
+        @Query("r") r: String = "json",
+        @Query("i") imdbID: String
+    ): Response<SuperHeroDetailResponse>
 }

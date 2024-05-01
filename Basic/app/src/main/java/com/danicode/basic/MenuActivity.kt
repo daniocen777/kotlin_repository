@@ -15,8 +15,8 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
-        delegate.applyDayNight()
+        // AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
+        // delegate.applyDayNight()
 
         val btnSayHello = findViewById<Button>(R.id.btnSayHello)
         val btnIMCApp = findViewById<Button>(R.id.btnIMCApp)

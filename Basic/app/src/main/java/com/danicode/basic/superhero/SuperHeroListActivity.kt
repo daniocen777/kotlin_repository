@@ -4,9 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.LinearLayout
 import android.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import com.danicode.basic.superhero.DetailSuperHeroActivity.Companion.EXTRA_ID
 import com.danicode.basic.databinding.ActivitySuperHeroListBinding
@@ -26,6 +28,7 @@ class SuperHeroListActivity : AppCompatActivity() {
      * */
     private lateinit var binding: ActivitySuperHeroListBinding
     private lateinit var retrofit: Retrofit // Para las apis
+    private lateinit var linearLayoutManage: RecyclerView.LayoutManager
     private lateinit var superHeroAdapter: SuperHeroAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,10 +58,17 @@ class SuperHeroListActivity : AppCompatActivity() {
         // Adapter
         superHeroAdapter =
             SuperHeroAdapter { navigateToDetail(it) }// Ya esta inicializado a una lista vacia
+
         // recycleView
-        binding.rvSuperHero.setHasFixedSize(true)
-        binding.rvSuperHero.layoutManager = LinearLayoutManager(this)
-        binding.rvSuperHero.adapter = superHeroAdapter
+        linearLayoutManage = LinearLayoutManager(this)
+        with(binding.rvSuperHero) {
+            setHasFixedSize(true)
+            layoutManager = linearLayoutManage
+            adapter = superHeroAdapter
+        }
+        // binding.rvSuperHero.setHasFixedSize(true)
+        // binding.rvSuperHero.layoutManager = LinearLayoutManager(this)
+        // binding.rvSuperHero.adapter = superHeroAdapter
     }
 
     private fun searchByName(query: String) {
