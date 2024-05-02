@@ -21,17 +21,35 @@ class MainActivity : AppCompatActivity(), IOnClickListener {
         mBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
+        /**
         mBinding.btnSave.setOnClickListener {
-            val storeEntity = StoreEntity(name = mBinding.etName.text.toString().trim())
-            // Agregar a la BD (segundo plano para que app no se congele)
-            Thread {
-                StoreApplication.database.storeDao().addStore(storeEntity)
-            }.start()
-            // Agregar a la vista
-            mAdapter.add(storeEntity)
+        val storeEntity = StoreEntity(name = mBinding.etName.text.toString().trim())
+        // Agregar a la BD (segundo plano para que app no se congele)
+        Thread {
+        StoreApplication.database.storeDao().addStore(storeEntity)
+        }.start()
+        // Agregar a la vista
+        mAdapter.add(storeEntity)
         }
+         */
+
+        // Fragmento
+        mBinding.fabStore.setOnClickListener { launchEditFragment() }
 
         setupRecyclerView()
+    }
+
+    // Lanzar el fragmento
+    private fun launchEditFragment() {
+        val fragment = EditStoreFragment()
+        val fragmentManager = supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+        // containerMain => ID del ConstraintLayout
+        fragmentTransaction.add(R.id.containerMain, fragment)
+        fragmentTransaction.commit()
+
+        // Ocultar el FloatingActionButton
+        mBinding.fabStore.hide()
     }
 
     private fun setupRecyclerView() {
