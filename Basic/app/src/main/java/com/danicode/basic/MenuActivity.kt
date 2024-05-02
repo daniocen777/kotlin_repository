@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import com.danicode.basic.imc_calculator.ImcCalculatorActivity
+import com.danicode.basic.settings.SettingsActivity
 import com.danicode.basic.superhero.SuperHeroListActivity
 import com.danicode.basic.todo.ToDoActivity
 
@@ -22,11 +23,19 @@ class MenuActivity : AppCompatActivity() {
         val btnIMCApp = findViewById<Button>(R.id.btnIMCApp)
         val btnTODO = findViewById<Button>(R.id.btnTODO)
         val btnSuperHero = findViewById<Button>(R.id.btnSuperHero)
+        val btnSettings = findViewById<Button>(R.id.btnSettings)
 
         btnSayHello.setOnClickListener { navigateToHello() }
         btnIMCApp.setOnClickListener { navigateIMCApp() }
         btnTODO.setOnClickListener { navigateTODOApp() }
         btnSuperHero.setOnClickListener { navigateSuperHeroApp() }
+        btnSettings.setOnClickListener { navigateSettingApp() }
+
+    }
+
+    private fun navigateSettingApp() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
     }
 
     private fun navigateSuperHeroApp() {
