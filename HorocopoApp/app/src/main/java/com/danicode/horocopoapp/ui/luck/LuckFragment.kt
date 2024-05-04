@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.danicode.horocopoapp.R
 import com.danicode.horocopoapp.databinding.FragmentLuckBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+// Colocar anotacion "@AndroidEntryPoint" para que pueda ser inyectada o inyecte a otra clase
+@AndroidEntryPoint
 class LuckFragment : Fragment() {
     private var _binding: FragmentLuckBinding? = null
     private val mBinding get() = _binding!!

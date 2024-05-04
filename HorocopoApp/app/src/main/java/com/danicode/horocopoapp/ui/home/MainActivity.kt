@@ -8,7 +8,10 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.danicode.horocopoapp.R
 import com.danicode.horocopoapp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+// Colocar anotacion "@AndroidEntryPoint" para que pueda ser inyectada o inyecte a otra clase
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

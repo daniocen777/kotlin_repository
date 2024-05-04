@@ -6,8 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.danicode.horocopoapp.databinding.FragmentPalmistryBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+// Colocar anotacion "@AndroidEntryPoint" para que pueda ser inyectada o inyecte a otra clase
+@AndroidEntryPoint
 class PalmistryFragment : Fragment() {
     private var _binding: FragmentPalmistryBinding? = null
     private val mBinding get() = _binding!!
