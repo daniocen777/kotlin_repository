@@ -28,7 +28,7 @@ class HoroscopeViewHolder(view: View) : RecyclerView.ViewHolder(view) {
             duration = 500 // milisegundos
             interpolator = LinearInterpolator()
             rotationBy(360f)
-            withEndAction { customLambda } // se ejecuta luego de terminar animacion
+            withEndAction { customLambda() } // se ejecuta luego de terminar animacion
             start()
         }
     }
