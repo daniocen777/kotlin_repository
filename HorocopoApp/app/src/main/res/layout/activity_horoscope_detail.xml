@@ -12,8 +12,55 @@
         android:id="@+id/ivZodiac"
         android:layout_width="0dp"
         android:layout_height="300dp"
+        android:contentDescription="@string/image_zodiac"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:background="@color/red" />
+        tools:background="@color/customColor" />
+
+    <!-- Vista para regresar al activity anterior -->
+    <ImageView
+        android:id="@+id/ifbBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_arrow_back"
+        android:padding="24dp"
+        android:src="@drawable/ic_arrow_back_ios"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/gold" />
+
+    <TextView
+        android:id="@+id/tvZodiac"
+        style="@style/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivZodiac"
+        tools:text="@string/app_name" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        style="@style/Body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="24dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvZodiac"
+        tools:text="@string/luck_31" />
+
+    <!-- Barra de progreso, ya que este activity traera datos de una API externa -->
+    <ProgressBar
+        android:id="@+id/pbDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/gold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvZodiac" />
 </androidx.constraintlayout.widget.ConstraintLayout>

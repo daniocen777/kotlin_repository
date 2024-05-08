@@ -16,4 +16,5 @@
     <color name="black_alpha">#98000000</color>
 
     <color name="red">#FF0000</color>
+    <color name="customColor">#6BE4DA</color>
 </resources>
