@@ -20,7 +20,7 @@
 
     <!-- Vista para regresar al activity anterior -->
     <ImageView
-        android:id="@+id/ifbBack"
+        android:id="@+id/ivbBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/image_arrow_back"

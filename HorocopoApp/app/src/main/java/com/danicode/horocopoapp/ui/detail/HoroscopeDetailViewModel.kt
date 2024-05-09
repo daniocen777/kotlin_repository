@@ -2,6 +2,7 @@ package com.danicode.horocopoapp.ui.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.danicode.horocopoapp.domain.model.HoroscopeModel
 import com.danicode.horocopoapp.domain.usecase.GetPredictionUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
@@ -19,17 +20,21 @@ class HoroscopeDetailViewModel @Inject constructor(
     private var _state = MutableStateFlow<HoroscopeDetailState>(HoroscopeDetailState.Loading)
     val state: StateFlow<HoroscopeDetailState> = _state
 
-    fun getHoroscope(sign: String) {
+    lateinit var horoscopeModel: HoroscopeModel
+
+    fun getHoroscope(sign: HoroscopeModel) {
+        horoscopeModel = sign
         // hilo principal
         viewModelScope.launch {
             _state.value = HoroscopeDetailState.Loading
             // hilo secundario
             val result = withContext(Dispatchers.IO) {
-                getPredictionUseCase(sign)
+                getPredictionUseCase(sign.name)
             }
             // hilo principal
             if (result != null) {
-                _state.value = HoroscopeDetailState.Success(result.horoscope, result.sign)
+                _state.value =
+                    HoroscopeDetailState.Success(result.horoscope, result.sign, horoscopeModel)
             } else {
                 _state.value =
                     HoroscopeDetailState.Error("Error en HoroscopeDetailViewModel::getHoroscope")

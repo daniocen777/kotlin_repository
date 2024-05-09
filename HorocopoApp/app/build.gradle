@@ -65,4 +65,7 @@ dependencies {
     // Retrofit => Para consumir apis
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    // Interceptor en llamadas a las apis => conseguir mas informacion de ellas (header, body, etc)
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
+
 }
