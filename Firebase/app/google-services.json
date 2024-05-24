@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "705618584030",
+    "project_id": "fir-android-ec805",
+    "storage_bucket": "fir-android-ec805.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:705618584030:android:c1ed33bc8a7aaf626dbd4f",
+        "android_client_info": {
+          "package_name": "com.danicode.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcV_Wnm72xbjthzMHnezgCyNGEJ2X0-0s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
