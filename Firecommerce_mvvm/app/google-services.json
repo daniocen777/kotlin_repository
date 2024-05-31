@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "864347567881",
+    "project_id": "fir-commerce-mvvm",
+    "storage_bucket": "fir-commerce-mvvm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:864347567881:android:9a174571ebd923734705d8",
+        "android_client_info": {
+          "package_name": "com.danicode.firecommerce_mvvm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5o8uYzsX4r8JimaFyZ8M82aS_jzXez5w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

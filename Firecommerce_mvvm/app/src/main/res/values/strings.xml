@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Firecommerce_mvvm</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rightAddress">The Right Address\nForShopping\nAnyday</string>
+    <string name="introduction__image_left">Image left circles</string>
+    <string name="introduction__image_center_ellipse">Imagecenter  ellipse</string>
+    <string name="introduction__tv_quality">It is now very easy to reach the\nbest qualityamong the\nproducts on the internet</string>
+    <string name="introduction__text_start_button">Start</string>
+    <string name="account_options__image_background">Account options background</string>
+    <string name="account_options__text_register_button">Register</string>
+    <string name="account_options__text_login_button">Login</string>
+    <string name="login__text_login">Let\'s Login</string>
+    <string name="login__account_register">Don\'t have an account? Register</string>
+    <string name="login__image_description">Background image login and register</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="login__forgot_password">Forgot password?</string>
+    <string name="login__buttonLoginText">Login</string>
+    <string name="facebookText">Facebook</string>
+    <string name="GoogleText">Google</string>
+    <string name="register__title">Let\'s Register</string>
+    <string name="firstName_hint">First Name</string>
+    <string name="register__account_question">Do you have an account? Login</string>
+    <string name="lastName_hint">Last Name</string>
+    <string name="register__buttonRegisterText">Register</string>
+    <string name="shoping_activity">Shopping</string>
+</resources>
