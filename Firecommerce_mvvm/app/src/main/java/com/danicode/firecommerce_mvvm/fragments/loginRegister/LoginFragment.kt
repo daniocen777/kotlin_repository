@@ -13,8 +13,10 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.danicode.firecommerce_mvvm.activities.ShoppingActivity
 import com.danicode.firecommerce_mvvm.databinding.FragmentLoginBinding
+import com.danicode.firecommerce_mvvm.dialog.setupBottomSheetDialog
 import com.danicode.firecommerce_mvvm.utils.Resource
 import com.danicode.firecommerce_mvvm.viewmodel.LoginViewModel
+import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -39,6 +41,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         initListeners()
+        initUIState()
     }
 
     private fun initListeners() {
@@ -51,6 +54,15 @@ class LoginFragment : Fragment() {
             }
         }
 
+        mBinding.loginTvForgotPassword.setOnClickListener {
+            setupBottomSheetDialog { email ->
+                viewModel.resetPassword(email)
+            }
+        }
+    }
+
+    private fun initUIState() {
+        // Login
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.login.collect {
@@ -67,6 +79,32 @@ class LoginFragment : Fragment() {
                         }
                         is Resource.Error -> {
                             Toast.makeText(requireContext(), it.message, Toast.LENGTH_LONG).show()
+                        }
+                        is Resource.Unspecified -> Unit
+                    }
+                }
+            }
+        }
+
+        // Reset Password
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.resetPassword.collect {
+                    when (it) {
+                        is Resource.Loading -> Unit
+                        is Resource.Success -> {
+                            Snackbar.make(
+                                requireView(),
+                                "Reset link was send to your email",
+                                Snackbar.LENGTH_LONG
+                            ).show()
+                        }
+                        is Resource.Error -> {
+                            Snackbar.make(
+                                requireView(),
+                                "Error: ${it.message}",
+                                Snackbar.LENGTH_LONG
+                            ).show()
                         }
                         is Resource.Unspecified -> Unit
                     }
