@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ShopFirebase</string>
+    <string name="intro_title">Welcome to <font color="#39C7A5">Digital Store</font>\n a <font color="#39C7A5">Gateway</font> to the Latest Tech</string>
+    <string name="intro_subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nCurabitur condimentum lacus mauris, in volutpat nulla ultrices vel.</string>
+    <string name="started_button">Let\'s Get Started</string>
+    <string name="signing">Already have an account? <font color="#39C7A5">Sign In</font></string>
+</resources>

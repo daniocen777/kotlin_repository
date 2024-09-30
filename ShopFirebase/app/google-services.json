@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1090556721609",
+    "project_id": "shopfirebase-ab4d2",
+    "storage_bucket": "shopfirebase-ab4d2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090556721609:android:3fbe8ec21bf5138c75d018",
+        "android_client_info": {
+          "package_name": "com.danicode.shopfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsae_Ug_CwoaYTVAgbDAtTjTYFZbmfjnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
