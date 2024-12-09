@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Virtual Store</string>
+    <string name="option_init_seller">Inicio</string>
+    <string name="option_my_store">Mi Tienda</string>
+    <string name="option_review">Reseñas</string>
+    <string name="option_log_out_seller">Cerrar sesión</string>
+
+    <string name="option_products_seller">Productos</string>
+    <string name="option_my_orders_seller">Mis órdenes</string>
+
+    <string name="welcome">Bienvenid@</string>
 </resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/option_products_seller"
+        android:icon="@drawable/ic_products"
+        android:title="@string/option_products_seller" />
+
+    <item
+        android:id="@+id/option_add_product"
+        android:enabled="false"
+        android:title="" />
+
+    <item
+        android:id="@+id/option_my_orders_seller"
+        android:icon="@drawable/ic_orders"
+        android:title="@string/option_my_orders_seller" />
+
+</menu>
