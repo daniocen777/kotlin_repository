@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "24094898251",
+    "project_id": "virtual-store-656fd",
+    "storage_bucket": "virtual-store-656fd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24094898251:android:fba5133163093dc31875ce",
+        "android_client_info": {
+          "package_name": "com.danicode.virtualstore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRE-QfBoyXi3SEgUMdAzIhrnyAzlBehO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
